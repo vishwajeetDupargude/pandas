@@ -51,7 +51,7 @@ print(count(1,10))
 '''
 
 #keyword
-
+'''
 def hello(greeting,title,first,last):
     print(f"{greeting},{title},{first},{last}")
 
@@ -61,3 +61,92 @@ def hello(greeting,title,first,last):
 #
 # print(hello(title="mr",first="vishwajeet",greeting="hello",last="dupargude"))  #keyword argument doesn't contain the order
 print(hello("hello",title="mr",first="vishwajeet",last="dupargude"))
+
+
+'''
+
+# *args  using this function we pass multiple non key arguments
+'''
+
+def display_name(*args):
+    for i in  args:
+        print(i,end=" ")
+print(display_name("Mr.","vishwajeet","Dupargue"))
+
+'''
+
+#**kwargs =this function pass multiple keyword-arguments
+
+
+'''
+
+
+def print_address(**kwargs):
+    for key,value in kwargs.items():  #this **kwargs used dictionary type in pair of key value
+        print(f"{key}, {value}")
+
+    
+
+
+
+print(print_address(street="Akurdi",state="India",zipcode="12345"))    
+
+'''
+
+# iterable= this is used over the loop and output one by one
+
+'''
+
+
+for char in "vishwajeeet":
+    print(char,end=" ")  #iterable for one by one output
+
+    
+'''
+
+
+#membership operator= used to test whether the value and varibles found  in a sequence 1)in  2)not in
+
+
+'''
+word="VISHWAJEET"
+
+letter=input("Guess a letter in words:")
+
+if letter in word:   #in return values  boolean value like either True or False
+    print(f"there is a {letter}")
+
+else:
+    print(f"{letter} was not found")    
+
+
+'''
+
+ #for not in
+
+
+'''
+word="VISHWAJEET"
+
+letter=input("Guess a letter in words:")
+
+if letter not in word:
+    print(f"{letter} was not found")      
+   
+
+else:
+    print(f"there is a {letter}")   
+    
+'''
+
+#example
+
+student={"vishwajeet","vijay","sumit","chetan"}
+
+students=input("Enter a student name:" )
+
+if students in student:
+    print(f" the student is in list{students}")
+
+else:
+    print(f"{students} not in list")    
